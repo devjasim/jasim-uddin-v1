@@ -17,7 +17,7 @@ const Sidebar = () => {
 		window.open("mailto: jasimfbd@gmail.com");
 	};
 
-	const { theme, setTheme } = useTheme("dark");
+	const { theme, setTheme } = useTheme();
 
 	const toggleTheme = () => {
 		setTheme(theme === "dark" ? "light" : "dark");
@@ -48,13 +48,13 @@ const Sidebar = () => {
 						Front End Engineer
 					</h4>
 					{/* <a
-						href={MyResume}
-						download="JASIM_UDDIN_RESUME.pdf"
-						className="flex items-center justify-center h-8 px-2 py-5 mb-4 uppercase bg-gray-200 rounded-md dark:bg-dark-200"
-					>
-						<AiOutlineCloudDownload className="w-6 h-6 mr-2" /> Get
-						Resume
-					</a> */}
+                            href={MyResume}
+                            download="JASIM_UDDIN_RESUME.pdf"
+                            className="flex items-center justify-center h-8 px-2 py-5 mb-4 uppercase bg-gray-200 rounded-md dark:bg-dark-200"
+                        >
+                            <AiOutlineCloudDownload className="w-6 h-6 mr-2" /> Get
+                            Resume
+                        </a> */}
 				</div>
 
 				{/* Social and importants Links */}

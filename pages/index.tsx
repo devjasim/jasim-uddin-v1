@@ -1,3 +1,4 @@
+import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import Bar from "../components/Bar";
 import { languages, tools } from "../data";
 
@@ -157,6 +158,14 @@ const index = () => {
 			{/* //Languages and Technologies */}
 		</div>
 	);
+};
+
+export const getServerSideProps: GetServerSideProps = async (
+	context: GetServerSidePropsContext
+) => {
+	// const res = await fetch(`${process.env.VERCEL_URL}/api/services`);
+
+	return { props: { endpoint: process.env.VERCEL_URL } };
 };
 
 export default index;
