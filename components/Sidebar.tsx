@@ -8,7 +8,6 @@ import {
 	RiFacebookBoxFill,
 	RiGithubFill,
 	RiStackOverflowLine,
-	RiTwitchFill,
 } from "react-icons/ri";
 import Avator from "../public/images/jasim-uddin.jpg";
 
@@ -75,7 +74,8 @@ const Sidebar = () => {
 					</a>
 					<a
 						className="flex items-center justify-center w-8 h-8 text-white bg-green-500 rounded-md cursor-pointer"
-						href="!#"
+						href="https://github.com/devjasim"
+						target="__blank"
 					>
 						<RiGithubFill />
 					</a>
@@ -85,13 +85,6 @@ const Sidebar = () => {
 						target="__blank"
 					>
 						<RiFacebookBoxFill />
-					</a>
-
-					<a
-						className="flex items-center justify-center w-8 h-8 text-white bg-green-500 rounded-md cursor-pointer"
-						href="!#"
-					>
-						<RiTwitchFill />
 					</a>
 				</div>
 			</div>
