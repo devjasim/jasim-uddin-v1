@@ -1,3 +1,4 @@
+import Head from "next/head";
 import { useState } from "react";
 import ProjectCard from "../components/ProjectCard";
 import ProjectNavbar from "../components/ProjectNavbar";
@@ -24,6 +25,9 @@ const Projects = () => {
 
 	return (
 		<div className="px-5 py-2 overflow-y-auto" style={{ height: "100%" }}>
+			<Head>
+				<title>Jasim Uddin Projects</title>
+			</Head>
 			<ProjectNavbar
 				active={active}
 				filterCategoryHandler={filterCategoryHandler}

@@ -3,9 +3,10 @@ import { Category } from "../types";
 
 const NavItem: FunctionComponent<{
 	value: Category | "all";
+	label: "React" | "Express" | "Nest" | "Next" | "All";
 	filterCategoryHandler: Function;
 	active: string;
-}> = ({ value, filterCategoryHandler, active }) => {
+}> = ({ value, label, filterCategoryHandler, active }) => {
 	let classNames =
 		"capitalize transition-all cursor-pointer hover:text-green";
 
@@ -15,7 +16,7 @@ const NavItem: FunctionComponent<{
 
 	return (
 		<li onClick={() => filterCategoryHandler(value)} className={classNames}>
-			{value}
+			{label}
 		</li>
 	);
 };
@@ -26,11 +27,11 @@ const ProjectNavbar: FunctionComponent<{
 }> = (props) => {
 	return (
 		<div className="flex px-3 py-2 space-x-3 overflow-x-auto list-none align-center">
-			<NavItem value="all" {...props} />
-			<NavItem value="react" {...props} />
-			<NavItem value="mongo" {...props} />
-			<NavItem value="django" {...props} />
-			<NavItem value="node" {...props} />
+			<NavItem label="All" value="all" {...props} />
+			<NavItem label="React" value="react" {...props} />
+			<NavItem label="Next" value="mongo" {...props} />
+			<NavItem label="Express" value="express" {...props} />
+			<NavItem label="Nest" value="nest" {...props} />
 		</div>
 	);
 };

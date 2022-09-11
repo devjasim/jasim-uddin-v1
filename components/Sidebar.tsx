@@ -67,17 +67,17 @@ const Sidebar = () => {
 					</a>
 					<a
 						className="flex items-center justify-center w-8 h-8 text-white bg-green-500 rounded-md cursor-pointer"
-						href="https://stackoverflow.com/users/11856004/jasim-uddin"
-						target="__blank"
-					>
-						<RiStackOverflowLine />
-					</a>
-					<a
-						className="flex items-center justify-center w-8 h-8 text-white bg-green-500 rounded-md cursor-pointer"
 						href="https://github.com/devjasim"
 						target="__blank"
 					>
 						<RiGithubFill />
+					</a>
+					<a
+						className="flex items-center justify-center w-8 h-8 text-white bg-green-500 rounded-md cursor-pointer"
+						href="https://stackoverflow.com/users/11856004/jasim-uddin"
+						target="__blank"
+					>
+						<RiStackOverflowLine />
 					</a>
 					<a
 						className="flex items-center justify-center w-8 h-8 text-white bg-green-500 rounded-md cursor-pointer"
@@ -91,10 +91,6 @@ const Sidebar = () => {
 
 			{/* Address  */}
 			<div className="px-5 py-4 my-5 -mx-5 text-center bg-gray-200 dark:bg-dark-200">
-				<div className="flex items-center justify-center space-x-2">
-					<GoLocation />
-					<span>Dhaka, Bangladesh</span>
-				</div>
 				<div>
 					<p className="flex items-center justify-center my-2">
 						<HiOutlineMail className="w-4 mr-2" />{" "}
@@ -103,6 +99,10 @@ const Sidebar = () => {
 					<p className="flex items-center justify-center mt-2">
 						<IoCallOutline className="w-4 mr-2" /> +880 195061-6750
 					</p>
+				</div>
+				<div className="flex items-center justify-center mt-2 space-x-2">
+					<GoLocation />
+					<span>Dhaka, Bangladesh</span>
 				</div>
 			</div>
 

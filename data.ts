@@ -41,18 +41,18 @@ export const services: IServices[] = [
 export const languages: ISkills[] = [
 	{
 		Icon: BsCircleFill,
-		name: "JavaScript(ES6)",
+		name: "JavaScript(ES6), TypeScript",
 		level: "70",
 	},
 	{
 		Icon: BsCircleFill,
-		name: "React",
-		level: "65",
+		name: "HTML5, CSS3, SCSS/LESS",
+		level: "70",
 	},
 	{
 		Icon: BsCircleFill,
-		name: "Gatsby",
-		level: "60",
+		name: "React, Redux",
+		level: "65",
 	},
 	{
 		Icon: BsCircleFill,
@@ -66,6 +66,11 @@ export const languages: ISkills[] = [
 	},
 	{
 		Icon: BsCircleFill,
+		name: "Gatsby",
+		level: "60",
+	},
+	{
+		Icon: BsCircleFill,
 		name: "Node.js",
 		level: "50",
 	},
@@ -76,12 +81,32 @@ export const languages: ISkills[] = [
 	},
 	{
 		Icon: BsCircleFill,
-		name: "Bootstrap",
+		name: "Nest.js",
+		level: "40",
+	},
+	{
+		Icon: BsCircleFill,
+		name: "Ant Design, Material UI, Tailwind",
+		level: "80",
+	},
+	{
+		Icon: BsCircleFill,
+		name: "Chart.js, Highchart, Google Chart",
 		level: "80",
 	},
 ];
 
 export const tools: ISkills[] = [
+	{
+		Icon: BsCircleFill,
+		name: "Webpack",
+		level: "80",
+	},
+	{
+		Icon: BsCircleFill,
+		name: "Jest Testing Framework",
+		level: "60",
+	},
 	{
 		Icon: BsCircleFill,
 		name: "MongoDB",
@@ -94,11 +119,6 @@ export const tools: ISkills[] = [
 	},
 	{
 		Icon: BsCircleFill,
-		name: "Docker",
-		level: "60",
-	},
-	{
-		Icon: BsCircleFill,
 		name: "Jira",
 		level: "85",
 	},
@@ -106,14 +126,13 @@ export const tools: ISkills[] = [
 		Icon: BsCircleFill,
 		name: "Framer",
 		level: "45",
-	},
+	}
 ];
 
 export const projects: IProjects[] = [
 	{
 		name: "SEO Audit Software",
-		description:
-			"This is an SaaS based software which is provide SEO services.",
+		description: "This is an SaaS based software which is provide SEO services worldwide.",
 		image_path: "/images/software_img.png",
 		deployed_url: "https://app.seoaudit.software/",
 		github_url: "",
@@ -121,10 +140,13 @@ export const projects: IProjects[] = [
 		key_techs: [
 			"React",
 			"Redux",
+			"TypeScript",
+			"Jest",
 			"Chart.js",
 			"Highchart",
 			"Webpack",
 			"Material UI",
+			"Bootstrap",
 		],
 	},
 	{

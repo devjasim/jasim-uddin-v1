@@ -1,15 +1,19 @@
+import Head from "next/head";
 import ServiceCard from "../components/ServiceCard";
 import { services } from "../data";
 
 const about = () => {
 	return (
 		<div className="flex flex-col flex-grow pt-1">
+			<Head>
+				<title>About Jasim Uddin</title>
+			</Head>
 			<p className="dark:text-textGray-200">
 				Hello!
 				<br />
-				I&apos;m Front End Software Engineer, I&apos;ve 2+ years of
+				I&apos;m Front End Software Engineer, I&apos;ve 3+ years of
 				experience working in this field with divers of web technologies
-				that mostly front end and some of the back ends to successfully
+				that mostly front end and some of the Back End Technologies to successfully
 				generate values in fast-paced and highly collaborative agile
 				product teams. <br /> If you are looking for a highly motivated,
 				self-starter, collaborative, and skillful person who can greatly

@@ -1,5 +1,6 @@
 import { ThemeProvider } from "next-themes";
 import type { AppProps } from "next/app";
+import Head from "next/head";
 import Navbar from "../components/Navbar";
 import Sidebar from "../components/Sidebar";
 import "../styles/globals.css";
@@ -7,6 +8,9 @@ import "../styles/globals.css";
 function MyApp({ Component, pageProps }: AppProps) {
 	return (
 		<ThemeProvider attribute="class">
+			<Head>
+				<title>Portfolio of Jasim Uddin</title>
+			</Head>
 			<div className="container mx-auto">
 				<div className="grid grid-cols-12 gap-6 my-14">
 					<div

@@ -1,41 +1,44 @@
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
+import Head from "next/head";
 import Bar from "../components/Bar";
 import { languages, tools } from "../data";
 
 const index = () => {
 	return (
 		<div style={{ height: "100%" }} className="p-4 overflow-y-auto">
+			<Head>
+				<title>Jasim Uddin Resume and Portfolio</title>
+			</Head>
 			<div className="grid gap-6 md:grid-cols-2">
 				<div className="single__items">
 					<div className="items">
 						<h4 className="my-3 text-2xl font-semibold">
 							Education
 						</h4>
-						<div className="">
+						<div className="education">
 							<h5 className="text-xl font-semibold my2">
-								Diploma in Computer Science
+								Bachelor of Science
+								<a href="https://uttarauniversity.edu.bd" className="ml-2 text-sm italic text-blue-500 underline">Uttara University</a>
 							</h5>
 							<p className="font-semibold">
-								Academy of Technologies (2015-2019)
+								Computer Science & Engineering (2021-present)
 							</p>
 							<p className="my-3 font-light dark:text-textGray-200">
-								I completed my Diploma in Computer Science from
-								a Reputed Institue in Bangladesh.
+								I&apos;ve not yet completed my graduation. This is an evening program. It&apos;s possible to continue online and also has the facilities to transfer credit to another university. The expected completion date is 2023.
 							</p>
 						</div>
 					</div>
 					<div className="items">
-						<div className="education">
+						<div className="">
 							<h5 className="text-xl font-semibold my2">
-								Computer Science and Engineering
+								Diploma Engineering
+								<a href="https://maitdhaka.com" className="ml-2 text-sm italic text-blue-500 underline">MAIT</a>
 							</h5>
 							<p className="font-semibold">
-								Academy of Technologies (2021-present)
+								Computer Science (2015-2019)
 							</p>
 							<p className="my-3 font-light dark:text-textGray-200">
-								I&apos;m studying at Bangladesh University of
-								Business and Technology in 1&apos;st year. The
-								expected completion date is 2023.
+								I have completed Diploma in Engineering in Computer Science from a Reputed Institute under the Bangladesh Technical Education Board (BTEB). 
 							</p>
 						</div>
 					</div>
@@ -66,11 +69,37 @@ const index = () => {
 				<div className="single__items">
 					<h4 className="mb-3 text-2xl font-semibold">Experiences</h4>
 					<div className="experience__item">
-						<h5 className="text-xl font-semibold my2">
+						<h5 className="my-2 text-xl font-semibold">
 							Front-End Software Engineer
 						</h5>
+						<div className="block">
+							<a href="https://tulip-tech.com" target="__blank" className="font-semibold text-green-400">Tulip Tech LTD (BD)</a>
+							<span className="ml-2 font-light">March - 2022 - Present</span>
+						</div>
+						<ul className="font-light dark:text-textGray-200">
+							<li className="py-2">
+								● Worked with an international scrum team, and developed Virtual Event management, Online Learning platform, Vacation Rental & tourism activities software, using React, Next, React Native, Redux, Node.js, Nest.js, MongoDB, and other needed technologies.
+							</li>
+							<li className="pb-2">
+								● Connect with international stakeholders, understand requirements, and implement UI design thorough development and API integration.
+							</li>
+							<li className="pb-2">
+								● Collaborates with other team members, and backend developers to understand data follow, and APIs and develop new features using various technologies.
+							</li>
+							<li className="pb-2">
+								● Write perform and efficient code and by test using JEST that reduces execution time and loads applications faster.
+							</li>
+							<li className="pb-2">
+								● Always write Javascript(ES6), and TypeScript clean code by following the SOLID principle. Using most of the Higher Order functions and following best practices.
+							</li>
+						</ul>
+					</div>
+					<div className="experience__item">
+						<h5 className="my-2 text-xl font-semibold">
+							Front-End Developer
+						</h5>
 						<p className="font-semibold">
-							SEO Audit Agency (Mar 2020 - Present)
+							<a target="__blank" className="font-semibold text-green-400" href="https://seoaudit.agency">SEO Audit Agency</a> (Mar 2020 - Mar 2022)
 						</p>
 						<ul className="font-light dark:text-textGray-200">
 							<li className="py-2">
@@ -101,32 +130,6 @@ const index = () => {
 								● Launch new features on a weekly and monthly
 								basis by uploading them on the server to using
 								Docker & GitHub Actions.
-							</li>
-						</ul>
-					</div>
-					<div className="mt-8 experience__item">
-						<h5 className="text-xl font-semibold my2">
-							Front End Developer
-						</h5>
-						<p className="font-semibold">
-							Stack Learner (Mar 2021 - Aug 2021)
-						</p>
-						<ul className="font-light dark:text-textGray-200">
-							<li className="py-2">
-								● Worked on building new React components for
-								the customer-facing web app which improved the
-								time on page for the average user by 2 minutes.
-							</li>
-							<li className="py-2">
-								● Worked within an agile team and helped
-								prioritize and scope feature requests to ensure
-								that the biggest impact features were worked on
-								first.
-							</li>
-							<li className="py-2 pb-0">
-								● Design and developed applications using
-								top-notch technologies like React, Redux,
-								Next.js, TypeScript etc.
 							</li>
 						</ul>
 					</div>
