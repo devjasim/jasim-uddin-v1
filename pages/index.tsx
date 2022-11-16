@@ -1,7 +1,8 @@
 import { GetServerSideProps, GetServerSidePropsContext } from "next";
 import Head from "next/head";
+import { BsCheck } from "react-icons/bs";
 import Bar from "../components/Bar";
-import { languages, tools } from "../data";
+import { experiences, languages, tools } from "../data";
 
 const index = () => {
 	return (
@@ -21,7 +22,7 @@ const index = () => {
 								<a href="https://uttarauniversity.edu.bd" className="ml-2 text-sm italic text-blue-500 underline">Uttara University</a>
 							</h5>
 							<p className="font-semibold">
-								Computer Science & Engineering (2021-present)
+								Computer Science & Engineering (2019-present)
 							</p>
 							<p className="my-3 font-light dark:text-textGray-200">
 								I&apos;ve not yet completed my graduation. This is an evening program. It&apos;s possible to continue online and also has the facilities to transfer credit to another university. The expected completion date is 2023.
@@ -46,7 +47,7 @@ const index = () => {
 						<h3 className="mt-8 text-2xl font-semibold">Skills</h3>
 						<div className="skills">
 							<h4 className="my-3 text-lg font-semibold">
-								Languages and Framworks
+								Languages and Frameworks
 							</h4>
 							<div className="my-2 ">
 								{languages.map((language, index) => (
@@ -67,98 +68,32 @@ const index = () => {
 					</div>
 				</div>
 				<div className="single__items">
-					<h4 className="mb-3 text-2xl font-semibold">Experiences</h4>
-					<div className="experience__item">
-						<h5 className="my-2 text-xl font-semibold">
-							Front-End Software Engineer
-						</h5>
-						<div className="block">
-							<a href="https://tulip-tech.com" target="__blank" className="font-semibold text-green-400">Tulip Tech LTD (BD)</a>
-							<span className="ml-2 font-light">March - 2022 - Present</span>
+					<h4 className="text-2xl font-semibold">Experiences</h4>
+					{experiences.map((experience, index) => (
+						<div key={index} className="mt-4">
+							<h5 className="my-2 text-xl font-semibold">
+								{experience.jobTitle}
+							</h5>
+							<div className="block">
+								<a href={experience.companyLink} target="__blank" className="font-semibold text-green-400">{experience.company}</a>
+								<span className="ml-2 font-light">{experience.startDate} - {experience.endDate}</span>
+							</div>
+							<ul className="flex flex-col mt-4 font-light dark:text-textGray-200 gap-y-4">
+								{experience.description.map((item, index) => (
+									<li className="flex items-start justify-start gap-x-2" key={index+100}>
+										<div className="mt-1">
+											<BsCheck className="text-primary" />
+										</div>
+										<div>
+											{item}
+										</div>
+									</li>
+								))}
+							</ul>
 						</div>
-						<ul className="font-light dark:text-textGray-200">
-							<li className="py-2">
-								● Worked with an international scrum team, and developed Virtual Event management, Online Learning platform, Vacation Rental & tourism activities software, using React, Next, React Native, Redux, Node.js, Nest.js, MongoDB, and other needed technologies.
-							</li>
-							<li className="pb-2">
-								● Connect with international stakeholders, understand requirements, and implement UI design thorough development and API integration.
-							</li>
-							<li className="pb-2">
-								● Collaborates with other team members, and backend developers to understand data follow, and APIs and develop new features using various technologies.
-							</li>
-							<li className="pb-2">
-								● Write perform and efficient code and by test using JEST that reduces execution time and loads applications faster.
-							</li>
-							<li className="pb-2">
-								● Always write Javascript(ES6), and TypeScript clean code by following the SOLID principle. Using most of the Higher Order functions and following best practices.
-							</li>
-						</ul>
-					</div>
-					<div className="experience__item">
-						<h5 className="my-2 text-xl font-semibold">
-							Front-End Developer
-						</h5>
-						<p className="font-semibold">
-							<a target="__blank" className="font-semibold text-green-400" href="https://seoaudit.agency">SEO Audit Agency</a> (Mar 2020 - Mar 2022)
-						</p>
-						<ul className="font-light dark:text-textGray-200">
-							<li className="py-2">
-								● Write modern, perform, and robust code for
-								including new features in SAAS-based software
-								which is an SEO Service Software.
-							</li>
-							<li className="py-2">
-								{" "}
-								● Create React components to perform and
-								visualize dynamic data by maintaining the SRP
-								principle. Use Redux for manage state and data.
-							</li>
-							<li className="py-2">
-								{" "}
-								● Expend features, refine code, and improve
-								processes, producing smoother operations and
-								enhancing user engagement.
-							</li>
-							<li className="py-2">
-								{" "}
-								● Designing and developing by collaborating with
-								UI/UX team to include new features using React,
-								Redux, and Python RESTful APIs.
-							</li>
-							<li className="py-2 pb-0">
-								{" "}
-								● Launch new features on a weekly and monthly
-								basis by uploading them on the server to using
-								Docker & GitHub Actions.
-							</li>
-						</ul>
-					</div>
-					<div className="mt-8 experience__item">
-						<h5 className="text-xl font-semibold my2">
-							Junior Front End Developer
-						</h5>
-						<p className="font-semibold">
-							Print Wizard (Apr 2019 - Dec 2020)
-						</p>
-						<ul className="font-light dark:text-textGray-200">
-							<li className="py-2">
-								● Worked with a team of three designers to build
-								a marketing website and e-commerce platform for
-								Print Wizard, an ambitious venture originating.
-							</li>
-							<li className="py-2">
-								● Implemented websites, mobile applications, and
-								landing pages from concept through deployment.
-							</li>
-							<li className="py-2 pb-0">
-								● Collaborated with product team members to
-								implement new features development.
-							</li>
-						</ul>
-					</div>
+					))}
 				</div>
 			</div>
-			{/* //Languages and Technologies */}
 		</div>
 	);
 };
@@ -166,8 +101,6 @@ const index = () => {
 export const getServerSideProps: GetServerSideProps = async (
 	context: GetServerSidePropsContext
 ) => {
-	// const res = await fetch(`${process.env.VERCEL_URL}/api/services`);
-
 	return { props: { endpoint: process.env.VERCEL_URL } };
 };
 

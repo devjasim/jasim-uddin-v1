@@ -23,3 +23,12 @@ export interface IProjects {
 }
 
 export type Category = "react" | "express" | "nest" | "mongo";
+
+export interface IExperience {
+	jobTitle: string;
+	company: string;
+	companyLink: string;
+	startDate: string;
+	endDate: string;
+	description: string[]
+}

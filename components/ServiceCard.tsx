@@ -6,7 +6,7 @@ const ServiceCard: FunctionComponent<{ service: IServices }> = ({
 }) => {
 	console.log("TITLE", title);
 	return (
-		<div className="p-2">
+		<div className="px-6 py-6">
 			<div className="flex items-start space-x-3">
 				<Icon className="w-8 h-8 mt-1 text-green-500" />
 				<div className="flex-1">
